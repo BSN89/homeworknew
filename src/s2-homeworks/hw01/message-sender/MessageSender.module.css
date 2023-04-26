@@ -3,19 +3,25 @@
 }
 
 .textarea {
-
-    border: 2px solid ;
+display: grid;
+    background-color: azure;
+    border: 2px solid darkslategray;
     border-radius: 5px;
     margin-left: 20px;
     padding-bottom: 10px;
 }
 
 .button {
-    background-color: #2575fc;
-    border: 2px solid black;
+    display: grid;
     border-radius: 5px;
     margin-left: 20px;
     margin-bottom: 10px;
+    margin-top: 5px;
+    background-color: lightslategrey;
+    color: black;
+    border: 2px solid darkslategray;
+    width: 50px;
+    height: 20px;
 }
 
 .button:hover {
