@@ -4,15 +4,24 @@
 
 .textarea {
 
+    border: 2px solid ;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding-bottom: 10px;
 }
 
 .button {
-
+    background-color: #2575fc;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
 
 .button:hover {
 
 }
+
 .button:active {
 
 }

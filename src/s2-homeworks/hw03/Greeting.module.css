@@ -1,4 +1,6 @@
 .greetingForm {
+    margin: 0;
+    padding-bottom: 3rem;
 }
 
 .inputAndButtonContainer {
@@ -28,7 +30,14 @@
 .button:disabled {
 }
 
+/*текст людей добавили*/
 .text {
+    font-weight: bold;
+    color: #2575fc;
+    border: 2px solid #2575fc;
+    border-radius: 5px;
+    width: 220px;
+    margin-bottom: 15px;
 }
 
 .greeting {
