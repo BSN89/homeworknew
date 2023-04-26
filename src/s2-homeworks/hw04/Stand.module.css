@@ -9,15 +9,14 @@
     display: flex;
    justify-content: center;
     gap: 48px;
-
+    flex-direction: column;
 }
 
 .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
     gap: 24px;
     margin-top: 20px;
+    justify-items: center;
 }
 
 .checkboxes {
