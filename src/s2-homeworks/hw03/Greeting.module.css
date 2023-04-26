@@ -10,6 +10,8 @@
 }
 
 .input {
+    background-color: azure;
+    border: 2px solid darkslategray;
 }
 
 .input:focus {
@@ -19,12 +21,20 @@
 }
 
 .button {
+    background-color: lightslategrey;
+    color: black;
+    border: 2px solid darkslategray;
+    border-radius: 5px;
+    width: 50px;
+    height: 20px;
 }
 
 .button:focus {
+    background-color: #00cc22;
 }
 
 .button:active {
+    background-color: aqua;
 }
 
 .button:disabled {
