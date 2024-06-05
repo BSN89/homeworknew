@@ -1,6 +1,4 @@
 .greetingForm {
-    margin: 0;
-    padding-bottom: 3rem;
 }
 
 .inputAndButtonContainer {
@@ -10,10 +8,6 @@
 }
 
 .input {
-    background-color: azure;
-    border: 2px solid darkslategray;
-    border-radius: 5px;
-    margin-left: 20px;
 }
 
 .input:focus {
@@ -23,36 +17,18 @@
 }
 
 .button {
-    display: grid;
-    background-color: lightslategrey;
-    color: black;
-    border: 2px solid darkslategray;
-    border-radius: 5px;
-    width: 50px;
-    height: 20px;
-    margin-top: 5px;
-    margin-left: 20px;
 }
 
 .button:focus {
-    background-color: #00cc22;
 }
 
 .button:active {
-    background-color: aqua;
 }
 
 .button:disabled {
 }
 
-/*текст людей добавили*/
 .text {
-    font-weight: bold;
-    color: #2575fc;
-    border: 2px solid #2575fc;
-    border-radius: 5px;
-    width: 220px;
-    margin-bottom: 15px;
 }
 
 .greeting {

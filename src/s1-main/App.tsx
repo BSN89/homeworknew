@@ -8,6 +8,7 @@ import HW4 from "../s2-homeworks/hw04/HW4";
 function App() {
     return (
         <div className={s.App}>
+            <div>Hello</div>
             <HW1/>
             {/*раскомментировать по ходу выполнения*/}
             <HW2/>

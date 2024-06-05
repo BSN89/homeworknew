@@ -1,10 +1,10 @@
 import React from 'react'
 import s from './Message.module.css'
-import {MessageType} from "../HW1";
+import {MessagesType} from "../HW1";
 
 // нужно создать правильный тип вместо any
 export type MessagePropsType = {
-    message: MessageType
+    message: MessagesType
 }
 
 // нужно отобразить приходящие данные
@@ -14,9 +14,9 @@ const Message = (props: MessagePropsType) => {
             <div className={s.imageAndText}>
                 <img
                     id={'hw1-avatar-' + props.message.id}
-
+                    // создаёт студент
                     src={props.message.user.avatar}
-
+                    //
                 />
                 <div className={s.text}>
                     <div id={'hw1-name-' + props.message.id} className={s.name}>

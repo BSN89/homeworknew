@@ -3,12 +3,19 @@
 }
 
 .textarea {
-display: grid;
-    background-color: azure;
-    border: 2px solid darkslategray;
-    border-radius: 5px;
+    width: 976px;
+    height: 40px;
+    top: 432px;
+    left: 70px;
+    gap: 0px;
+    border-radius: 20px 20px 20px 20px;
+    display: grid;
+    background: #F5F7FB;
     margin-left: 20px;
     padding-bottom: 10px;
+    box-shadow: 0px 1px 2px 0px #1D21261A;
+
+
 }
 
 .button {

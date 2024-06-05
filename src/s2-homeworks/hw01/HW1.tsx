@@ -14,38 +14,41 @@ import avatar from './avatar.png'
 * */
 
 // нужно создать правильный тип вместо any
-export type MessageType = {
+export type MessagesType = {
     id: number
-    user: {
-        avatar: string
-        name: string
-    }
-    message: {
-        text: string
-        time: string
-    }
+    user: UserType
+    message: MessageType
+}
+type UserType = {
+    avatar: string
+    name: string
+}
+type MessageType = {
+    text: string
+    time: string
 }
 
 // структуру объекта не менять
-export const message0: MessageType = {
+export const message0: MessagesType = {
     id: 0,
     user: {
         avatar: avatar, // можно менять
-        name: 'Brad Pitt',  // можно менять
+        name: 'Pitt',  // можно менять
     },
     message: {
-        text: 'Hello my Friends', // можно менять
+        text: 'Hello my friends', // можно менять
         time: '22:00', // можно менять
     },
 }
-export const friendMessage0: MessageType = {
+export const friendMessage0: MessagesType = {
     id: 100,
     user: {
         avatar: avatar, // можно менять
-        name: ' Brad Pitt Clone', // можно менять
+        name: 'Ivan', // можно менять
+
     },
     message: {
-        text: 'How are you?', // можно менять
+        text: 'Hi Bred', // можно менять
         time: '22:00', // можно менять
     },
 }
@@ -53,7 +56,7 @@ export const friendMessage0: MessageType = {
 const HW1 = () => {
     return (
         <div id={'hw1'}>
-            <div className={s2.hwTitle}>Homework # 1</div>
+            <div className={s2.hwTitle}>Hometask № 1</div>
             <div className={s2.hw}>
                 {/*проверка отображения (не менять)*/}
                 <div>
