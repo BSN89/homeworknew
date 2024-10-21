@@ -9,8 +9,10 @@ export const homeWorkReducer = (state: UserType[], action: ActionType): UserType
         case 'sort': {
             if (action.payload === 'up'){
                 return [...state].sort((a,b) => a.name.localeCompare(b.name))
+                //return [...state].sort((a,b) => b.age - a.age)
             }if (action.payload === 'down'){
                 return [...state].sort((a,b) => a.name.localeCompare(b.name)).reverse()
+                //return [...state].sort((a,b) => a.age - b.age)
             }
                 return state
         }
