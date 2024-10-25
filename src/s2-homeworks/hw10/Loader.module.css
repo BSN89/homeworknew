@@ -1,3 +1,27 @@
 .loader {
+    width: 108px;
+    height: 108px;
+    top: 168px;
+    left: 70px;
+    padding: 9px 0px 0px 0px;
+    gap: 0px;
+
+    /* Анимация */
+    animation-name: spin;
+    animation-delay: 1ms;
+    animation-timing-function: linear;
+    animation-duration: 300ms;
+    animation-iteration-count: infinite; /* Бесконечная анимация */
+
+    /* Свойства для создания круга */
+    border: 16px solid #f3f3f3; /* Светлая рамка */
+    border-top: 16px solid #3498db; /* Синяя рамка сверху */
+    border-radius: 50%; /* Делаем элемент кругом */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+
     /*свг и/или анимация*/
 }
