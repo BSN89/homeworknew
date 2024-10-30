@@ -26,8 +26,6 @@ const HW12 = () => {
 
     const change = (id: any) => { // дописать функцию
         dispatch(changeThemeId(id))
-       return themes.filter(el => el.id === id)
-
     }
 
     useEffect(() => {
