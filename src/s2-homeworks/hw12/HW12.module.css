@@ -18,6 +18,30 @@ html {
     color: var(--color);
 }
 
+/* SuperSelect.module.css */
 .select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--background);
+    color: var(--color);
+    cursor: pointer;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
 
+.select:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.option {
+    background-color: var(--background);
+    color: var(--color);
+}
+
+.option:hover {
+    background-color: #007BFF;
+    color: #FFFFFF;
 }
