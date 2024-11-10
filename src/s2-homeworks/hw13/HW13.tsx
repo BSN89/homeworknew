@@ -24,25 +24,57 @@ const HW13 = () => {
         const url =
             x === null
                 ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
-                : 'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test'
+                : 'https://samurai.it-incubator.io/api/3.0/homework/test'
 
         setCode('')
         setImage('')
         setText('')
         setInfo('...loading')
 
-        axios
-            .post(url, {success: x})
+        axios.post(url, {success: x})
             .then((res) => {
-                setCode('Код 200!')
-                setImage(success200)
-                // дописать
-
+                if(res.status === 200){
+                    console.log(res)
+                    setCode(`${res.status}`)
+                    setImage(success200)
+                    setText(res.data.info)
+                    setInfo(res.data.errorText)
+                }
+                else{
+                    setCode('Ошибка!')
+                    setImage(errorUnknown)
+                    setText('Неизвестная ошибка')
+                    setInfo('Ошибка')
+                }
             })
             .catch((e) => {
-                // дописать
+                console.error('Ошибка запроса:', e)
+
+                if (e.response) {
+                    const status = e.response.status
+                    if (status === 400) {
+                        console.log(e.response)
+                        setCode(`${e.response.status}`)
+                        setImage(error400)
+                        setText(e.response.data.info)
+                        setInfo(e.response.data.errorText)
+                    } else if (status === 500) {
+                        console.log(e.response)
+                        setCode(`${e.response.status}`)
+                        setImage(error500)
+                        setText(e.response.data.info)
+                        setInfo(e.response.data.errorText)
+                    } else {
+                        console.log(e.response)
+                        setCode('Ошибка!')
+                        setImage(errorUnknown)
+                        setText('Произошла неизвестная ошибка')
+                        setInfo('Ты просто ку ку')
+                    }
+                }
 
             })
+
     }
 
     return (
@@ -55,6 +87,7 @@ const HW13 = () => {
                         id={'hw13-send-true'}
                         onClick={send(true)}
                         xType={'secondary'}
+                        disabled={info === '...loading'}
                         // дописать
 
                     >
@@ -64,6 +97,7 @@ const HW13 = () => {
                         id={'hw13-send-false'}
                         onClick={send(false)}
                         xType={'secondary'}
+                        disabled={info === '...loading'}
                         // дописать
 
                     >
@@ -73,6 +107,7 @@ const HW13 = () => {
                         id={'hw13-send-undefined'}
                         onClick={send(undefined)}
                         xType={'secondary'}
+                        disabled={info === '...loading'}
                         // дописать
 
                     >
@@ -82,6 +117,7 @@ const HW13 = () => {
                         id={'hw13-send-null'}
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
+                        disabled={info === '...loading'}
                         // дописать
 
                     >
