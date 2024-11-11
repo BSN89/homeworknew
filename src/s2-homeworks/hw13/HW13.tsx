@@ -37,8 +37,8 @@ const HW13 = () => {
                     console.log(res)
                     setCode(`${res.status}`)
                     setImage(success200)
-                    setText(res.data.info)
-                    setInfo(res.data.errorText)
+                    setText(res.data.errorText)
+                    setInfo(res.data.info)
                 }
                 else{
                     setCode('Ошибка!')
@@ -56,20 +56,20 @@ const HW13 = () => {
                         console.log(e.response)
                         setCode(`${e.response.status}`)
                         setImage(error400)
-                        setText(e.response.data.info)
-                        setInfo(e.response.data.errorText)
+                        setText(e.response.data.errorText)
+                        setInfo(e.response.data.info)
                     } else if (status === 500) {
                         console.log(e.response)
                         setCode(`${e.response.status}`)
                         setImage(error500)
-                        setText(e.response.data.info)
-                        setInfo(e.response.data.errorText)
+                        setText(e.response.data.errorText)
+                        setInfo(e.response.data.info)
                     } else {
                         console.log(e.response)
                         setCode('Ошибка!')
                         setImage(errorUnknown)
                         setText('Произошла неизвестная ошибка')
-                        setInfo('Ты просто ку ку')
+                        setInfo('Error')
                     }
                 }
 
