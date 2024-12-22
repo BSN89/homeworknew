@@ -1,27 +1,50 @@
 .tech {
-    width: 50vw;
+    width: 50%; /* 50vw может быть слишком большим, используем проценты */
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
 }
 
 .developer {
-
+    width: 50%; /* Ширина столбца разработчика */
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
 }
 
 .techHeader {
-    width: 50vw;
+    width: 50%; /* Ширина заголовка для технологии */
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #ccc;
 }
 
 .developerHeader {
-
+    width: 50%; /* Ширина заголовка для разработчика */
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #ccc;
 }
 
 .row {
     display: flex;
+    border-bottom: 1px solid #ddd;
 }
 
 .rowHeader {
     display: flex;
+    border-bottom: 2px solid #ccc;
 }
 
 .loading {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 18px;
+    color: #888;
 }
